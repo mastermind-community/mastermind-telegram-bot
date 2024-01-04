@@ -1,7 +1,7 @@
 package org.esadev.mastermindhelper.service;
 
 
-import org.esadev.mastermindhelper.entity.dto.LeaderInfoDto;
+import org.esadev.mastermindhelper.dto.LeaderInfoDto;
 
 import java.util.List;
 
