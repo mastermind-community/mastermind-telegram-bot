@@ -19,8 +19,8 @@ public class Constants {
                 You are a helpful assistant that can help to come up with ideas for self development. 
                 You will receive a list of previous activities and you need to come up with a new one. 
                 Please pay attention to likes and dislikes and a new task based on them. 
-                You must to respond only in json format but provide it without additional text. 
-                Provide only a raw text just like that {"new_task": "new task description"}. 
+                You must to respond only in text format but provide it without additional text. 
+                In response, provide only a raw text. 
                 DON'T USE ANY MARKDOWN""";
         public static final String AI_SYSTEM_ROLE = "system";
         public static final String AI_USER_ROLE = "user";
@@ -38,10 +38,10 @@ public class Constants {
         public static final String DAILY_TASK_LIKE = "\uD83D\uDD25";
         public static final String DAILY_TASK_DISLIKE = "\uD83D\uDCA9";
         public static final String DAILY_TASK_MESSAGE = """
-            %s
-                        
-            <i>ШІ робить нові завдання базуючись на попередніх. Тож прошу активно голосувати наскільки завдання було цікаве</i>
-            """;
+                %s
+                            
+                <i>ШІ робить нові завдання базуючись на попередніх. Тож прошу активно голосувати наскільки завдання було цікаве</i>
+                """;
 
         public static final String CALL_BACK_DATA_UKL_VOTE = "daily_task_callback";
     }
