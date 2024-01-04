@@ -1,0 +1,24 @@
+sheet:
+  applicationName: ${SHEET_APPLICATION_NAME}
+  credentialsFilePath: ${SHEET_CREDENTIALS_FILE_PATH}
+  mastermindId: ${SHEET_MASTERMIND_ID}
+
+telegram:
+  token: ${TELEGRAM_TOKEN}
+  name: ${TELEGRAM_NAME}
+  webhook: ${TELEGRAM_WEBHOOK}
+  chat-id: ${TELEGRAM_CHAT_ID}
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    username: ${SPRING_DATASOURCE_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql: ${SPRING_JPA_SHOW_SQL}
+
+ai:
+  key: ${AI_KEY}
+  completion-url: ${AI_COMPLETION_URL}
