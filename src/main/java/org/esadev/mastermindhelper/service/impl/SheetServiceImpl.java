@@ -5,7 +5,7 @@ import com.google.api.services.sheets.v4.model.ValueRange;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.esadev.mastermindhelper.config.SheetConfig;
-import org.esadev.mastermindhelper.entity.dto.LeaderInfoDto;
+import org.esadev.mastermindhelper.dto.LeaderInfoDto;
 import org.esadev.mastermindhelper.props.SheetProps;
 import org.esadev.mastermindhelper.service.SheetService;
 import org.springframework.stereotype.Service;
@@ -52,7 +52,7 @@ public class SheetServiceImpl implements SheetService {
                         .build();
                 leaderInfoDtos.add(leaderInfoDto);
             }
-      }
+        }
         return leaderInfoDtos;
     }
 }

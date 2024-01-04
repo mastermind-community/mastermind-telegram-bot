@@ -1,6 +1,6 @@
 package org.esadev.mastermindhelper.service.impl;
 
-import org.esadev.mastermindhelper.entity.dto.LeaderInfoDto;
+import org.esadev.mastermindhelper.dto.LeaderInfoDto;
 import org.esadev.mastermindhelper.service.MessageFormatService;
 import org.esadev.mastermindhelper.utils.MessageUtils;
 import org.springframework.stereotype.Service;
