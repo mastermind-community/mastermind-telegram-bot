@@ -27,11 +27,10 @@ public class AiServiceImpl implements AiService {
     private final AiProps aiProps;
     private final RestClient restClient;
 
-    @SneakyThrows
     @Override
-    public String getDailyTask() {
+    public String getDailyTask() throws JsonProcessingException {
         AiMessageResponse response = fetchAiResponse();
-        return response.getChoices().getFirst().getMessage().getContent();
+        return response.choices().getFirst().message().content();
     }
 
     private AiMessageResponse fetchAiResponse() throws JsonProcessingException {

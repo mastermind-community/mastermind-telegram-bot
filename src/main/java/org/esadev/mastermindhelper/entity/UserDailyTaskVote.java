@@ -20,14 +20,14 @@ import java.time.LocalDateTime;
 public class UserDailyTaskVote {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private Long userId;
     private LocalDateTime voteTime;
     private String login;
     private String firstName;
     private String lastName;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @Cascade(CascadeType.PERSIST)
     @JoinColumn(name = "MESSAGE_ID")
     private DailyTask dailyTask;

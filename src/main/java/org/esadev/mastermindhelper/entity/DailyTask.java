@@ -16,7 +16,7 @@ import java.util.Objects;
 @Table(schema = "telegram_schema", name = "daily_tasks")
 public class DailyTask {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(length = 5000)
     private String task;
@@ -36,12 +36,12 @@ public class DailyTask {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        DailyTask vote = (DailyTask) o;
-        return Objects.equals(id, vote.id);
+        DailyTask dailyTask = (DailyTask) o;
+        return likes == dailyTask.likes && dislikes == dailyTask.dislikes && messageId == dailyTask.messageId && Objects.equals(task, dailyTask.task) && Objects.equals(date, dailyTask.date) && Objects.equals(callback, dailyTask.callback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, task, date, likes, dislikes, messageId, callback);
     }
 }

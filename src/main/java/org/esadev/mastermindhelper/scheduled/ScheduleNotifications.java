@@ -1,5 +1,6 @@
 package org.esadev.mastermindhelper.scheduled;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -45,7 +46,7 @@ public class ScheduleNotifications {
     }
 
     @Scheduled(cron = SEND_DAILY_TASK)
-    public void sendDailyTask() throws TelegramApiException {
+    public void sendDailyTask() throws TelegramApiException, JsonProcessingException {
         String dailyTask = aiService.getDailyTask();
         if (StringUtils.isNotEmpty(dailyTask)) {
             SendMessage dailyGroupTask = dailyTasksService.createDailyGroupTask(dailyTask);
