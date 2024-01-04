@@ -48,7 +48,7 @@ public class AiServiceImpl implements AiService {
     }
 
     private ChatCompletionRequest buildDailyTasksRequest() throws JsonProcessingException {
-        List<DailyTask> previousDailyTasks = dailyTasksService.findAllForDailyTasks();
+        List<DailyTask> previousDailyTasks = dailyTasksService.findAllForGeneratingTasks();
         String content = objectMapper.writer().withDefaultPrettyPrinter().writeValueAsString(previousDailyTasks);
         ChatCompletionRequest chatCompletionRequest = new ChatCompletionRequest();
         chatCompletionRequest.setMessages(List.of(

@@ -11,5 +11,7 @@ public interface UserDailyTaskVoteService {
 
     void delete(UserDailyTaskVote userDailyTaskVote);
 
-    List<UserDailyTaskVote> getAllByMessageAndReactions(long messageId, List<Reaction> reactions);
+    List<UserDailyTaskVote> getUserForVoteById(long messageId, Long userId, List<Reaction> reactions);
+
+    List<UserDailyTaskVote> getUsersForVote(long messageId, List<Reaction> reactions);
 }

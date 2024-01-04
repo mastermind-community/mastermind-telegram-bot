@@ -43,6 +43,6 @@ public class Constants {
                 <i>ШІ робить нові завдання базуючись на попередніх. Тож прошу активно голосувати наскільки завдання було цікаве</i>
                 """;
 
-        public static final String CALL_BACK_DATA_UKL_VOTE = "daily_task_callback";
+        public static final String CALLBACK_DATA_UKL_VOTE = "daily_task_callback";
     }
 }
