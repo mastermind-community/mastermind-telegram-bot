@@ -37,7 +37,7 @@ public class TelegramController {
             } catch (TelegramApiException e) {
                 UUID randomUUID = UUID.randomUUID();
                 log.error("Something went wrong with processing callback {}", randomUUID, e);
-                mastermindHelperBot.execute(MessageCreator.createSimpleMessage((STR."Щось пішло не так, зверніться в підтримку з цим кодом: \{randomUUID}"), update.getMessage().getChatId().toString()));
+                mastermindHelperBot.execute(MessageCreator.createSimpleMessage(("Щось пішло не так, зверніться в підтримку з цим кодом: %s".formatted(randomUUID)), update.getMessage().getChatId().toString()));
             }
         }
     }
