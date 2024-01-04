@@ -1,4 +1,4 @@
-package org.esadev.mastermindhelper.entity.dto;
+package org.esadev.mastermindhelper.dto;
 
 import lombok.Builder;
 import lombok.Data;
